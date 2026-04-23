@@ -26,7 +26,7 @@
 .header {
   display: flex;
   margin-block-end: 100px;
-  align-items: center;    
+  align-items: center;
   justify-content: center;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .header__subtitle {
-  font-size:  var(--font-header-subtitle);
+  font-size: var(--font-header-subtitle);
   line-height: 100%;
   text-transform: uppercase;
 }
@@ -68,11 +68,11 @@
   background: #fff;
 }
 
-.card__title  {
+.card__title {
   font-variation-settings: "wght" var(--font-weight-title);
   font-size: 18px;
   padding: 4px 10px;
-  }
+}
 
 .card__text {
   font-variation-settings: "wght" var(--font-weight-card-text);
@@ -80,7 +80,6 @@
   line-height: 1.17;
   padding: 25px 28px 0 25px;
 }
-
 
 /*картинки карточек и фильтры к ним*/
 
@@ -107,11 +106,11 @@
   text-shadow:
     -1px -1px 0 var(--label-stroke-color),
     1px -1px 0 var(--label-stroke-color),
-    -1px  1px 0 var(--label-stroke-color),
-    1px  1px 0 var(--label-stroke-color);
+    -1px 1px 0 var(--label-stroke-color),
+    1px 1px 0 var(--label-stroke-color);
 }
 
-@supports (-webkit-text-stroke: 1px #FFFFFF) {
+@supports (-webkit-text-stroke: 1px #ffffff) {
   .card__image-label {
     -webkit-text-stroke: 1px var(--label-stroke-color);
     text-shadow: none;
@@ -137,7 +136,8 @@
   filter: blur(8px);
 }
 .card__image-faded {
-  filter: blur(1px) brightness(110%) contrast(40%) hue-rotate(95deg) saturate(145%);
+  filter: blur(1px) brightness(110%) contrast(40%) hue-rotate(95deg)
+    saturate(145%);
 }
 
 /*общие стили кнопок*/
@@ -191,7 +191,6 @@
   mix-blend-mode: difference;
   transition: color 0.5s ease-in-out;
 }
-
 
 /*стили для оборачивающей сердце кнопки*/
 
@@ -276,7 +275,6 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-
 /*доп стили для кнопки like*/
 
 .card__like-button {
@@ -287,15 +285,15 @@
 
 /*стили для секции с dialog*/
 .section__save {
-  margin: 0 auto;;
+  margin: 0 auto;
   padding: 0 34.5px 100px;
 }
 
 .save-button {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 16px 18px;
 }
@@ -346,13 +344,12 @@
   backdrop-filter: blur(10px);
 }
 
-
 /*адаптив*/
 
 @media (width >= 700px) {
-.save-button {
-  flex-direction: row;
-}
+  .save-button {
+    flex-direction: row;
+  }
 
   .save-button svg {
     width: 21px;
@@ -360,8 +357,8 @@
   }
 
   .dialog {
-  padding: 30px;
-  background: #fff;
-  max-width: 353px;
-}
+    padding: 30px;
+    background: #fff;
+    max-width: 353px;
+  }
 }
