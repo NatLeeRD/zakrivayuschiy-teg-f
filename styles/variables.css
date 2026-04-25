@@ -2,12 +2,11 @@
 :root {
   /*основные размеры страницы*/
   --container-width: clamp(375px, 100vw, 700px);
-  /*--container-inline-padding: clamp(16px, 5vw, 122px);*/
   --container-block-padding: clamp(122px, 30%, 130px);
 
   /*шрифты*/
   --font-main: "Inter", Arial, sans-serif;
-  --font-accent: "PressStart2P", monospace;
+  --font-accent: "PressStart2P", fantasy;
   --font-header-title: clamp(
     49px,
     calc(49px + 16 * ((100vw - 375px) / 325)),
@@ -18,9 +17,9 @@
     calc(14px + 9 * ((100vw - 375px) / 325)),
     23px
   );
-  --font-weight-text: 400;
+  --font-weight-text: 410;
   --font-weight-title: 715;
-  --font-weight-card-text: 410;
+  --font-weight-accent: 400;
 
   /*фон страницы*/
   --page-bg:
