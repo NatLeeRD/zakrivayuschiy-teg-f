@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /*основные размеры страницы*/
-  --container-width: clamp(375px, 100vw, 700px);
+  --container-width: min(100%, 700px);
   --container-block-padding: clamp(122px, 30%, 130px);
 
   /*шрифты*/
@@ -32,4 +32,11 @@
   --accent-color: #000000;
   --heart-contour-color: #000;
   --animation-fill-color: red;
+}
+
+
+@media (width < 375px) {
+  :root {
+    --font-header-title: clamp(42px, 10vw, 49px);
+  }
 }

@@ -12,7 +12,6 @@
 
 .page {
   padding-block-start: 98px;
-  min-inline-size: 375px;
   min-block-size: 100dvb;
   font-family: var(--font-main);
   font-variation-settings: "wght" var(--font-weight-text);
@@ -21,7 +20,7 @@
 
 .header {
   display: flex;
-  margin-block-end: 100px;
+  margin: 0 auto 100px;
   align-items: center;
   justify-content: center;
 }
@@ -30,8 +29,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  width: var(--container-width, 100%);
+  gap: 21px;
+  inline-size: var(--container-width, 100%);
   padding-block: var(--container-block-padding, 122px);
   border: 2px solid #000;
   background: #fff;
@@ -88,7 +87,9 @@
 .card__image {
   display: block;
   inline-size: 100%;
-  max-block-size: 371px;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__image-label {
@@ -275,7 +276,7 @@
 
 .card__like-button {
   min-inline-size: 130px;
-  max-block-size: 38px;
+  padding: 8px 17px;
   text-align: center;
 }
 
@@ -292,7 +293,7 @@
   justify-content: center;
   gap: 8px;
   padding: 16px 18px;
-  min-inline-size: 308px;
+  /*min-inline-size: 308px;*/
 }
 
 .save-button svg {
@@ -308,8 +309,6 @@
   padding: 31px 38px;
   border: 2px solid #000;
   background: #fff;
-  max-block-size: 191px;
-  max-inline-size: 341px;
   font-family: var(--font-accent, fantasy);
   font-size: 14px;
   font-weight: var(--font-weight-text, 400);
@@ -319,6 +318,7 @@
 
 .dialog[open] {
   display: block;
+  margin: auto;
 }
 
 .dialog__content {
@@ -327,6 +327,7 @@
   align-items: center;
   gap: 19px;
   margin-bottom: 27px;
+  max-inline-size: 260px;
 }
 
 .ok-button {
@@ -345,7 +346,7 @@
 /*адаптив*/
 
 @media (width >= 700px) {
-  .card__image {
+  .card__image-wrapper {
     max-block-size: 696px;
   }
 
@@ -354,16 +355,16 @@
   }
 
   .save-button svg {
-    width: 21px;
-    height: 21px;
+    inline-size: 21px;
+    block-size: 21px;
   }
 
   .dialog {
     padding: 28px;
-    max-inline-size: 353px;
   }
 
   .dialog__content {
     margin-bottom: 30px;
+    max-inline-size: 293px;
   }
 }
